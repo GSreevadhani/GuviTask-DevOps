@@ -1,8 +1,9 @@
 #!/bin/bash
-    echo hi123
-    chmod +x build.sh
-    ./build.sh
-    docker login -u ar8888 -p dckr_pat_HU8f1bsQJp3j2DnCttXuuoppo7w
-    docker tag test ar8888/ar
-    docker push ar8888/ar
+echo hi123
+chmod +x build.sh
+./build.sh
+docker login -u sreevadhani -p "$(cat docker_password.txt)"
+docker tag test sreevadhani/ar
+docker push sreevadhani/ar
+
     
