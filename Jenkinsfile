@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_USERNAME = credentials('docker-username') // Ensure these credentials exist in Jenkins
-        DOCKER_PASSWORD = credentials('docker-password')
+        DOCKER_USERNAME = credentials('DOCKER_USERNAME') // Ensure these credentials exist in Jenkins
+        DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
     }
 
     stages {
