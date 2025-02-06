@@ -9,3 +9,7 @@ echo "$DOCKER_PASSWORD" | docker login -u "sreevadhani" --password-stdin
 # Tag and push the image
 docker tag test sreevadhani/ar
 docker push sreevadhani/ar  
+
+docker pull sreevadhani/ar
+
+docker run -d -p 8000:80 --name test sreevadhani/ar
