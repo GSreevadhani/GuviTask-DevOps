@@ -7,10 +7,10 @@ chmod +x build.sh
 echo "$DOCKER_PASSWORD" | docker login -u "sreevadhani" --password-stdin
 
 # Tag and push the image
-docker tag test sreevadhani/ar
-docker push sreevadhani/ar  
+docker tag test-image sreevadhani/art
+docker push sreevadhani/art  
 
-docker pull sreevadhani/ar
-docker run -d -p 8000:80 --name=my-app-repo sreevadhani/ar
-kubectl create deployment ar-deploy --image=sreevadhani/ar --port 80
+docker pull sreevadhani/art
+docker run -d -p 8000:80 --name=my-app-repo sreevadhani/art
+kubectl create deployment ar-deploy --image=sreevadhani/art --port 80
 kubectl expose deployment ar-deploy --type=NodePort --port=80
