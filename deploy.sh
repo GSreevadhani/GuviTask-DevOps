@@ -4,7 +4,7 @@ chmod +x build.sh
 ./build.sh
 
 # Use non-interactive login
-echo "$DOCKER_PASSWORD" | docker login -u "sreevadhani" --password-stdin
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 # Tag and push the image
 docker tag test-image sreevadhani/art
