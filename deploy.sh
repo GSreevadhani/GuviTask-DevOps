@@ -12,5 +12,8 @@ docker push sreevadhani/art
 
 docker pull sreevadhani/art
 docker run -d -p 8000:80 --name=my-app-repo sreevadhani/art
-#kubectl create deployment ar-deploy --image=sreevadhani/art --port 80
-#kubectl expose deployment ar-deploy --type=NodePort --port=80
+
+minikube start
+
+kubectl create deployment ar-deploy --image=sreevadhani/art --port 80
+kubectl expose deployment ar-deploy --type=NodePort --port=80
