@@ -12,6 +12,3 @@ docker push sreevadhani/service-tag
 
 docker pull sreevadhani/service-tag
 docker run -d -p 8000:80 --name=my-service-repo sreevadhani/service-tag
-
-kubectl create deployment ar-deploy --image=sreevadhani/service-tag --port 80
-kubectl expose deployment ar-deploy --type=NodePort --port=80
